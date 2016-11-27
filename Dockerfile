@@ -12,13 +12,12 @@ RUN apt-get -q update && apt-get install -qy \
 RUN npm install -g homebridge
 RUN npm install -g homebridge-homeassistant
 
-
 RUN mkdir -p /var/run/dbus
 
 ADD run.sh /root/run.sh
 
-RUN [ "cross-build-end" ]
-
 EXPOSE 51826
+
+RUN [ "cross-build-end" ]
 
 CMD ["/root/run.sh"]
