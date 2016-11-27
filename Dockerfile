@@ -2,7 +2,7 @@ FROM fstehle/rpi-node:4
 
 RUN [ "cross-build-start" ]
 
-RUN apt-get -q update && apt-get install -qy \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     git \
     libavahi-compat-libdnssd-dev \
