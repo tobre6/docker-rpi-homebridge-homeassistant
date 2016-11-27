@@ -13,6 +13,7 @@ RUN mkdir -p /var/run/dbus
 EXPOSE 51826
 
 ADD run.sh /root/run.sh
+RUN chmod +x /root/run.sh
 
 RUN [ "cross-build-end" ]
 
