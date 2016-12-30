@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends avahi-daemon avahi-discover libnss-mdns libavahi-compat-libdnssd-dev
 RUN apt-get install -y --no-install-recommends curl wget git apt-transport-https python build-essential make g++ libavahi-compat-libdnssd-dev libkrb5-dev vim net-tools
 RUN npm install -g --unsafe-perm homebridge
-RUN npm install -g https://github.com/tobre6/homebridge-homeassistant.git
+RUN npm install -g --unsafe-perm https://github.com/tobre6/homebridge-homeassistant
 
 RUN mkdir -p /var/run/dbus
 
